@@ -5,3 +5,16 @@
 tags
 node_modules
 __pycache__
+
+
+# Frappe / Bench
+sites/
+assets/
+.env
+*.log
+
+# VS Code
+.vscode/
+
+# Local configs
+*.sqlite3

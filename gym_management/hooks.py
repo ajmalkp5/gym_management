@@ -148,23 +148,14 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"gym_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"gym_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"gym_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"gym_management.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"gym_management.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "daily": [
+        "gym_management.scheduler.update_membership_status",
+        "gym_management.scheduler.expiry_notifications",
+        "gym_management.scheduler.update_dashboard_stats",
+        # "gym_management.scheduler.validate_freeze_period"
+    ]
+}
 
 # Testing
 # -------
