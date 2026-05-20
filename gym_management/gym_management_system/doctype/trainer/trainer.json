@@ -10,7 +10,8 @@
   "specialization",
   "experience",
   "bio",
-  "hourly_fee"
+  "hourly_fee",
+  "pt_session_count"
  ],
  "fields": [
   {
@@ -20,8 +21,9 @@
   },
   {
    "fieldname": "specialization",
-   "fieldtype": "Data",
-   "label": "Specialization"
+   "fieldtype": "Link",
+   "label": "Specialization",
+   "options": "Workout Type"
   },
   {
    "fieldname": "experience",
@@ -42,12 +44,17 @@
    "fieldname": "hourly_fee",
    "fieldtype": "Currency",
    "label": "Hourly Fee"
+  },
+  {
+   "fieldname": "pt_session_count",
+   "fieldtype": "Int",
+   "label": "PT Session Count"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-19 23:07:42.534678",
+ "modified": "2026-05-20 12:43:59.047442",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Trainer",

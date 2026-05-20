@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "MBP-.####",
+ "autoname": "field:plan_name",
  "creation": "2026-05-18 12:29:48.580439",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -14,7 +14,6 @@
   "duration_days",
   "amount",
   "grace_period",
-  "allowed_freeze_days",
   "is_popular",
   "auto_renew",
   "is_active",
@@ -28,7 +27,10 @@
   {
    "fieldname": "plan_name",
    "fieldtype": "Data",
-   "label": "Plan Name"
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "short_description",
@@ -61,11 +63,6 @@
    "fieldname": "grace_period",
    "fieldtype": "Int",
    "label": "Grace Period"
-  },
-  {
-   "fieldname": "allowed_freeze_days",
-   "fieldtype": "Int",
-   "label": "Allowed Freeze Days"
   },
   {
    "default": "0",
@@ -118,11 +115,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-19 23:06:30.325164",
+ "modified": "2026-05-20 13:10:59.120404",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Membership Plan",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -134,6 +131,28 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
    "share": 1,
    "write": 1
   }

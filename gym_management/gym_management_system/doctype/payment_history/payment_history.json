@@ -13,7 +13,7 @@
  ],
  "fields": [
   {
-   "fieldname": "date_vjow",
+   "fieldname": "payment_date",
    "fieldtype": "Date",
    "label": "Payment Date"
   },

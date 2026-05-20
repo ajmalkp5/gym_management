@@ -92,7 +92,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Scheduled\nCompleted\nCancelled"
+   "options": "Present\nAbsent\nPending"
   },
   {
    "fieldname": "notes",
@@ -118,7 +118,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-19 22:59:42.423501",
+ "modified": "2026-05-20 12:45:32.330159",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Training Schedule",

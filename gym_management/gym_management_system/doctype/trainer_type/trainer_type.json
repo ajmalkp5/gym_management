@@ -1,12 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:trainer_type_name",
  "creation": "2026-05-18 14:51:27.377202",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_i6su",
-  "trainer_type_name"
+  "trainer_type_name",
+  "status"
  ],
  "fields": [
   {
@@ -16,16 +18,24 @@
   {
    "fieldname": "trainer_type_name",
    "fieldtype": "Data",
-   "label": "Trainer Type Name"
+   "label": "Trainer Type",
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-18 14:51:46.274507",
+ "modified": "2026-05-20 12:39:05.790709",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Trainer Type",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
