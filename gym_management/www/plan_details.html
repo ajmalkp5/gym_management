@@ -26,7 +26,6 @@
 
 <div class="container">
 
-  <!-- HERO -->
   <div class="detail-hero" id="heroSection">
 
     <img
@@ -41,7 +40,6 @@
 
   </div>
 
-  <!-- BODY -->
   <div class="detail-body">
 
     <h2>Description</h2>
@@ -123,7 +121,7 @@ async function loadPlan(plan) {
 
         const json = await res.json();
 
-        console.log(json);
+        // console.log(json);
 
         const result = json.message;
 
@@ -137,11 +135,9 @@ async function loadPlan(plan) {
         document.getElementById("paymentBtn").href =
         `payment.html?plan=${data.name}`;
 
-        // PLAN NAME
         document.getElementById("planName").innerText =
             data.plan_name;
 
-        // META
         let metaText =
             `₹${data.amount} / ${data.duration_type}`;
 
@@ -152,15 +148,12 @@ async function loadPlan(plan) {
         document.getElementById("planMeta").innerText =
             metaText;
 
-        // DESCRIPTION
         document.getElementById("description").innerHTML =
             data.detailed_description || "";
 
-        // DURATION
         document.getElementById("durationText").innerText =
             `${data.duration_days} days membership`;
 
-        // BANNER IMAGE
         if (data.banner_image) {
 
             const img = document.getElementById("bannerImage");
@@ -169,7 +162,6 @@ async function loadPlan(plan) {
             img.style.display = "block";
         }
 
-        // FEATURES
         const featureList =
             document.getElementById("featuresList");
 
@@ -191,7 +183,6 @@ async function loadPlan(plan) {
 
         }
 
-        // POLICIES
         document.getElementById("cancelPolicy").innerHTML =
             data.cancellation_policy || "No policy available";
 
@@ -202,7 +193,7 @@ async function loadPlan(plan) {
 
     catch (err) {
 
-        console.error(err);
+        // console.error(err);
 
         alert("Server Error");
 

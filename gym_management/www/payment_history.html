@@ -41,7 +41,6 @@
     </table>
   </div>
 
-  <!-- Pagination -->
   <div style="margin-top:20px;text-align:center;">
     <button id="prevBtn" class="btn btn-outline">Prev</button>
     <span id="pageInfo"></span>
@@ -122,7 +121,7 @@ async function loadPayments(page) {
         updatePagination();
 
     } catch (err) {
-        console.error(err);
+        // console.error(err);
     }
 }
 

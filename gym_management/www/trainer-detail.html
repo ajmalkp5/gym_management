@@ -21,7 +21,6 @@
 
 <div class="container">
 
-  <!-- HERO -->
   <div class="detail-hero" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
 
     <div id="avatar"
@@ -118,7 +117,7 @@ async function loadTrainer(id) {
             t.trainer_name.charAt(0).toUpperCase();
 
     } catch (err) {
-        console.error(err);
+        // console.error(err);
         alert("Server error");
     }
 }

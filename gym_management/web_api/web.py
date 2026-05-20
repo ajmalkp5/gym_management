@@ -5,6 +5,7 @@ from frappe.utils import (
     date_diff
 )
 
+
 @frappe.whitelist(allow_guest=True)
 def get_dashboard_stats():
     try:
@@ -157,8 +158,7 @@ def get_payment_page_data(plan):
         }
 
 
-import frappe
-from frappe.utils import today, add_days, date_diff
+
 
 
 @frappe.whitelist(allow_guest=True)
@@ -272,8 +272,6 @@ def create_payment(plan):
 
 
 
-import frappe
-from frappe.utils import today
 
 @frappe.whitelist(allow_guest=False)
 def get_my_membership():
@@ -320,7 +318,6 @@ def get_my_membership():
 
 
 
-from frappe.utils import add_days, date_diff, today
 
 @frappe.whitelist()
 def upgrade_membership(member, new_plan):
@@ -329,7 +326,6 @@ def upgrade_membership(member, new_plan):
 
         plan = frappe.get_doc("Membership Plan", new_plan)
 
-        # close old active membership
         old = frappe.get_all(
             "Gym Membership",
             filters={"member": member, "status": "Active"},
@@ -369,7 +365,6 @@ def upgrade_membership(member, new_plan):
 
 
 
-import frappe
 
 @frappe.whitelist(allow_guest=True)
 def get_trainers(page=1, page_length=4):
@@ -470,8 +465,7 @@ def get_trainer_details(id):
 
 
 
-import frappe
-from frappe.utils import today, date_diff
+
 
 
 @frappe.whitelist()
@@ -504,7 +498,6 @@ def get_profile():
             member_name
         )
 
-        # ACTIVE MEMBERSHIP
         membership = frappe.db.get_value(
             "Gym Membership",
             {

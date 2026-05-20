@@ -25,7 +25,6 @@ href="/assets/gym_management/css/styles.css" />
 
   <div class="payment-box">
 
-    <!-- SUMMARY -->
     <div class="summary">
 
       <div>
@@ -45,7 +44,6 @@ href="/assets/gym_management/css/styles.css" />
 
     </div>
 
-    <!-- PAYMENT FORM -->
     <form id="paymentForm">
 
       <div class="form-group">
@@ -128,9 +126,8 @@ async function loadPaymentPage() {
 
         const result = json.message;
 
-        console.log(result);
+        // console.log(result);
 
-        // GUEST CHECK
         if (result.status === "guest") {
 
             alert("Login required");
@@ -165,7 +162,7 @@ async function loadPaymentPage() {
 
     catch(err) {
 
-        console.error(err);
+        // console.error(err);
 
         alert("Server Error");
 
@@ -192,7 +189,7 @@ document.getElementById("paymentForm")
 
         const result = json.message;
 
-        console.log(result);
+        // console.log(result);
 
         if (result.status === "guest") {
 
@@ -233,7 +230,7 @@ document.getElementById("paymentForm")
 
     catch(err) {
 
-        console.error(err);
+        // console.error(err);
 
         alert("Server Error");
 

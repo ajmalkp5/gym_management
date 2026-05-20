@@ -129,14 +129,12 @@
 
         const data = result.data;
 
-        // HEADER
         document.querySelector(".profile-header h2")
           .innerText = data.full_name;
 
         document.querySelector(".role")
           .innerText = data.membership_plan;
 
-        // FORM
         document.getElementById("full_name")
           .value = data.full_name || "";
 
@@ -152,12 +150,10 @@
         document.getElementById("address")
           .value = data.address || "";
 
-        // AVATAR
         document.querySelector(".big-avatar")
           .innerText =
           (data.full_name || "U")[0];
 
-        // STATS
         document.getElementById("activeDays")
           .innerText = data.stats.active_days;
 
@@ -174,7 +170,7 @@
 
       catch (err) {
 
-        console.error(err);
+        // console.error(err);
 
       }
 
@@ -238,7 +234,7 @@
 
         catch (err) {
 
-          console.error(err);
+          // console.error(err);
 
         }
 

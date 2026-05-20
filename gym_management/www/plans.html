@@ -27,12 +27,9 @@
   <h1 class="page-title">Membership Plans</h1>
   <p class="page-subtitle">Choose the plan that fits your goals and lifestyle.</p>
 
-  <!-- PLAN LIST -->
   <div class="grid grid-3" id="plansContainer">
-    <!-- dynamic content loads here -->
   </div>
 
-  <!-- PAGINATION -->
   <div class="pagination" style="margin-top:25px;text-align:center;">
     <button id="prevBtn" class="btn btn-outline">Prev</button>
     <span id="pageInfo" style="margin:0 10px;"></span>
@@ -79,12 +76,12 @@ async function loadPlans(page) {
 
         const json = await res.json();
 
-        console.log("API RESPONSE:", json);
+        // console.log("API RESPONSE:", json);
 
         const result = json.message;
 
         if (!result || result.status !== "success") {
-            console.error("API Error:", result);
+            // console.error("API Error:", result);
             return;
         }
 
@@ -123,7 +120,7 @@ async function loadPlans(page) {
         updatePaginationUI();
 
     } catch (err) {
-        console.error("Pagination error:", err);
+        // console.error("Pagination error:", err);
     }
 }
 

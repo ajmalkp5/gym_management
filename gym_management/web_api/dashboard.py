@@ -6,25 +6,21 @@ def get_admin_dashboard():
 
     try:
 
-        # Revenue (FIX FIELD NAME IF NEEDED)
         total_revenue = frappe.db.sql("""
             SELECT SUM(IFNULL(paid_amount, 0))
             FROM `tabGym Payment`
         """)[0][0] or 0
 
 
-        # Active members
         active_members = frappe.db.count(
             "Gym Membership",
             {"status": "Active"}
         )
 
 
-        # Trainers
         trainer_count = frappe.db.count("Trainer")
 
 
-        # Sessions today (REPLACES ATTENDANCE)
         attendance_today = 0
 
         if frappe.db.exists("DocType", "Training Schedule"):
@@ -39,7 +35,6 @@ def get_admin_dashboard():
             )
 
 
-        # Expiring memberships
         next_7 = add_days(today(), 7)
 
         expiring = frappe.db.sql("""

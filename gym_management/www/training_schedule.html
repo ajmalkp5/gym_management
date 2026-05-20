@@ -40,9 +40,8 @@ async function loadSchedules() {
 
     const json = await res.json();
 
-    console.log(json);
+    // console.log(json);
 
-    // SAFE CHECK
     if (!json.message) {
 
       alert("API Error");
@@ -87,7 +86,7 @@ async function loadSchedules() {
 
   catch (err) {
 
-    console.error(err);
+    // console.error(err);
 
     alert("Server Error");
 
