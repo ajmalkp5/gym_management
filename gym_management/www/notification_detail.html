@@ -73,15 +73,12 @@ async function loadNotification(id) {
 
         const data = result.data;
 
-        // title
         document.querySelector(".detail-hero h1").innerText =
             data.title || "Notification";
 
-        // meta
         document.querySelector(".meta").innerText =
             new Date(data.date).toLocaleString();
 
-        // message (safe replace)
         const body = document.querySelector(".detail-body");
 
         body.innerHTML = `
@@ -94,7 +91,6 @@ async function loadNotification(id) {
         `;
 
     } catch (err) {
-        console.error(err);
         alert("Server error");
     }
 }
