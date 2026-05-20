@@ -9,6 +9,7 @@ class MembershipPlan(Document):
     def validate(self):
 
         self.set_duration_days()
+        self.validate_amount()
 
     def set_duration_days(self):
 
@@ -22,3 +23,13 @@ class MembershipPlan(Document):
         self.duration_days = mapping.get(
             self.duration_type
         )
+
+        
+
+    def validate_amount(self):
+
+        if not self.amount:
+            frappe.throw("Amount is required")
+
+        if self.amount <= 0:
+            frappe.throw("Amount must be greater than 0")

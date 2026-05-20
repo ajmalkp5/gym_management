@@ -1,16 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-05-18 15:45:58.371630",
+ "creation": "2026-05-20 13:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_break_membership",
   "gym_open_time",
   "gym_close_time",
   "default_grace_period",
-  "max_freeze_days"
+  "max_freeze_days",
+  "section_break_notifications",
+  "membership_reminder_days",
+  "payment_reminder_days",
+  "enable_email_notification",
+  "enable_whatsapp_notification"
  ],
  "fields": [
+  {
+   "fieldname": "section_break_membership",
+   "fieldtype": "Section Break",
+   "label": "Gym & Membership Settings"
+  },
   {
    "fieldname": "gym_open_time",
    "fieldtype": "Time",
@@ -22,25 +33,53 @@
    "label": "Gym Close Time"
   },
   {
+   "default": "0",
    "fieldname": "default_grace_period",
    "fieldtype": "Int",
    "label": "Default Grace Period"
   },
   {
+   "default": "0",
    "fieldname": "max_freeze_days",
    "fieldtype": "Int",
    "label": "Max Freeze Days"
+  },
+  {
+   "fieldname": "section_break_notifications",
+   "fieldtype": "Section Break",
+   "label": "Notification Settings"
+  },
+  {
+   "default": "7",
+   "fieldname": "membership_reminder_days",
+   "fieldtype": "Int",
+   "label": "Membership Reminder Days"
+  },
+  {
+   "default": "3",
+   "fieldname": "payment_reminder_days",
+   "fieldtype": "Int",
+   "label": "Payment Reminder Days"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_email_notification",
+   "fieldtype": "Check",
+   "label": "Enable Email Notification"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_whatsapp_notification",
+   "fieldtype": "Check",
+   "label": "Enable WhatsApp Notification"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-05-18 15:47:52.313037",
- "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Settings",
- "owner": "Administrator",
  "permissions": [
   {
    "create": 1,

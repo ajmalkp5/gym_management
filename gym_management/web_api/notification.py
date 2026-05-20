@@ -43,6 +43,27 @@ def get_notifications(page=1, page_length=10):
 @frappe.whitelist()
 def mark_notification_read(name):
 
+    user = frappe.session.user
+
+    if user == "Guest":
+        return {
+            "status": "guest"
+        }
+
+    exists = frappe.db.exists(
+        "Notification Log",
+        {
+            "name": name,
+            "for_user": user
+        }
+    )
+
+    if not exists:
+        return {
+            "status": "error",
+            "message": "Not allowed"
+        }
+
     frappe.db.set_value(
         "Notification Log",
         name,
@@ -50,7 +71,9 @@ def mark_notification_read(name):
         1
     )
 
-    return {"status": "success"}
+    return {
+        "status": "success"
+    }
 
 
 

@@ -152,8 +152,8 @@ scheduler_events = {
     "daily": [
         "gym_management.scheduler.update_membership_status",
         "gym_management.scheduler.expiry_notifications",
-        "gym_management.scheduler.update_dashboard_stats",
-        # "gym_management.scheduler.validate_freeze_period"
+        "gym_management.scheduler.update_overdue_payments",
+        "gym_management.scheduler.validate_freeze_period"
     ]
 }
 

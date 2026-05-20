@@ -35,7 +35,7 @@ def login_user(email=None, password=None):
 
 
 @frappe.whitelist(allow_guest=True)
-def register_user(member_name, email, password, mobile_number, gender=None, dob=None, address=None, emergency_contact=None):
+def register_user(member_name, email, password, mobile_number, gender=None, date_of_birth=None, address=None, emergency_contact=None):
 
     try:
 
@@ -60,7 +60,7 @@ def register_user(member_name, email, password, mobile_number, gender=None, dob=
             "email": email,
             "mobile_number": mobile_number,
             "gender": gender,
-            "dob": dob,
+            "dob": date_of_birth,
             "address": address,
             "emergency_contact": emergency_contact,
             "status": "Active",
